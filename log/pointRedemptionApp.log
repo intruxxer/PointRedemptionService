@@ -1,0 +1,528 @@
+2015-04-02 16:18:31,318 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:31,318 INFO - MQServer: Listener is starting...
+ 2015-04-02 16:18:31,326 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:31,418 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:31,419 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:134)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:205)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:32,467 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:32,467 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:32,468 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:32,468 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:33,473 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:33,473 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:33,473 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:33,474 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:34,479 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:34,479 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:34,479 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:34,479 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:35,485 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:35,485 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:35,485 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:35,485 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:36,497 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:36,497 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:36,498 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:36,498 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:37,500 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:37,500 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:37,501 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:37,501 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59332-1427878014551-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:37,502 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:37,502 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:37,503 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:37,503 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:134)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:205)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:38,504 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:38,504 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:38,506 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:38,506 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:39,511 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:39,511 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:39,511 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:39,512 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:40,518 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:40,519 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:40,519 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:40,520 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:41,524 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:41,524 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:41,525 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:41,525 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:42,527 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:42,527 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:42,528 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:42,529 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:43,531 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:43,532 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:43,533 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:43,533 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59307-1427877990935-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:18:43,534 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:18:43,534 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:18:43,535 INFO - Router: Verifying the message...
+ 2015-04-02 16:18:43,535 ERROR - ID:Alis-MacBook-Pro.local-62029-1427966310794-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59342-1427878022540-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:134)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:205)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:27:18,888 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:27:18,888 INFO - MQServer: Listener is starting...
+ 2015-04-02 16:27:18,921 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:27:19,024 INFO - Router: Verifying the message...
+ 2015-04-02 16:27:19,026 ERROR - ID:Alis-MacBook-Pro.local-62626-1427966838547-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59342-1427878022540-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:134)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:205)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:27:20,032 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:27:20,032 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:27:20,033 INFO - Router: Verifying the message...
+ 2015-04-02 16:27:20,033 ERROR - ID:Alis-MacBook-Pro.local-62626-1427966838547-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59342-1427878022540-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-02 16:27:21,040 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-02 16:27:21,041 INFO - Router: Msg is to be verified.. 
+ 2015-04-02 16:27:21,041 INFO - Router: Verifying the message...
+ 2015-04-02 16:27:21,065 ERROR - ID:Alis-MacBook-Pro.local-62626-1427966838547-2:1:1:1 Exception while processing message: ID:Alis-MacBook-Pro.local-59342-1427878022540-2:1:1:1:1
+ java.lang.NullPointerException
+	at id.bri.switching.app.Router.processISOMessage(Router.java:81)
+	at id.bri.switching.mq.MQServer.onMessage(MQServer.java:69)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1233)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1367)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:194)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:122)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2015-04-08 14:19:45,914 INFO - MQServer: Listener is starting...
+ 2015-04-08 14:19:45,915 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:19:45,935 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:19:49,022 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:19:49,939 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:19:49,940 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:19:50,035 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:19:50,037 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:19:50,038 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:19:50,340 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:19:50,784 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:19:50,785 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:19:50,851 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:19:50,851 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:19:50,852 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:19:51,024 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:19:51,609 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:19:51,610 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:19:51,720 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:21:57,057 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:21:57,057 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:21:57,275 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:21:58,256 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:21:58,256 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:21:58,315 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:22:05,035 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:22:05,035 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:22:05,319 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:22:05,646 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:22:05,647 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:22:05,698 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:11,330 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:11,331 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:13,232 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:14,476 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:14,476 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:14,525 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:14,526 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:14,526 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:15,396 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:16,610 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:16,611 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:17,233 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:17,233 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:17,233 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:17,576 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:20,871 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:20,871 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:21,666 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:21,667 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:21,667 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:26,074 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:28,982 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:28,983 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:29,055 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:29,055 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:29,056 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:29,285 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:30,850 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:30,851 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:31,013 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:31,013 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:31,014 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:31,306 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:33,234 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:33,234 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:33,303 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:33,304 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:33,304 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:33,451 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:34,566 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:34,566 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:34,647 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:34,647 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:34,647 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:34,756 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:35,723 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:35,758 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:35,882 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:35,883 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:35,883 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:36,273 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:37,161 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:37,162 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:37,261 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:37,261 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:37,262 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:37,604 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:38,385 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:38,385 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:38,429 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:38,429 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:38,430 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:38,623 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:38,995 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:38,995 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:39,062 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:39,063 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:39,063 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:39,310 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:40,231 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:40,231 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:40,316 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:40,317 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:40,317 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:40,695 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:41,513 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:41,514 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:41,599 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:41,600 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:41,600 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:41,901 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:44,007 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:44,008 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:44,091 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 14:40:44,092 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 14:40:44,092 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 14:40:44,534 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 14:40:45,447 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 14:40:45,448 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 14:40:45,633 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:31:59,217 INFO - MQServer: Connection to activeMQ is established...
+ 2015-04-08 16:31:59,842 INFO - MQServer: Listener is starting...
+ 2015-04-08 16:31:59,842 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:31:59,848 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:00,655 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:01,711 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:01,712 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:01,716 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:01,717 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:01,717 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:02,252 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:05,796 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:05,797 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:05,798 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:05,798 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:05,799 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:07,875 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:09,568 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:09,569 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:09,570 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:09,570 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:09,571 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:09,968 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:11,602 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:11,603 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:11,604 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:11,604 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:11,604 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:12,512 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:16,253 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:16,254 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:16,254 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:16,255 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:16,255 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:17,068 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:18,779 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:18,780 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:18,781 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:18,781 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:18,781 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:19,265 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:21,896 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:21,897 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:21,898 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:21,899 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:21,899 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:22,173 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:22,915 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:22,916 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:22,917 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:22,917 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:22,918 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:23,134 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:24,848 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:24,848 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:24,849 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:24,849 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:24,850 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:25,299 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:26,800 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:26,801 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:26,802 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:26,802 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:26,803 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:27,269 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:28,708 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:28,709 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:28,709 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:28,710 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:28,710 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:28,962 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:36,176 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:36,176 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:36,177 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:36,177 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:36,177 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:36,628 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:32:39,253 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:32:39,254 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:32:39,255 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:32:39,256 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:32:39,256 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:32:40,103 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:33:01,529 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:33:01,530 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:33:01,530 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:33:01,531 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:33:01,531 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:33:09,819 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:34:41,456 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:34:41,457 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:34:41,457 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:34:41,458 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:34:41,458 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:34:51,651 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:35:13,970 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:35:13,971 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:35:13,972 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:35:13,972 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:35:13,972 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:35:15,133 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:35:17,657 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:35:17,658 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:35:17,659 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:35:17,659 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:35:17,659 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:35:43,188 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:36:10,035 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:36:10,036 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:36:10,037 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:36:10,037 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:36:10,037 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:36:24,320 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:36:36,397 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:36:36,398 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:36:36,398 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 16:36:36,399 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 16:36:36,399 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 16:36:37,409 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 16:36:43,494 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 16:36:43,495 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 16:36:43,496 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 17:00:39,201 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 17:00:39,224 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 17:00:39,373 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 17:00:40,223 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 17:00:40,224 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 17:00:40,224 INFO - MQServer: Sending verification message: success. 
+ 2015-04-08 17:00:47,463 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-08 17:00:47,463 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-08 17:00:47,939 INFO - Router: Verifying the 0200 message...
+ 2015-04-08 17:00:48,396 INFO - Router:  PROC CODE = 303030.
+ 2015-04-08 17:00:48,397 INFO - Router: Response msg that's sent: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-08 17:00:48,397 INFO - MQServer: Sending verification message: success. 
+ 
