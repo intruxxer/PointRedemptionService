@@ -43,7 +43,7 @@ public class Logging {
 	        	PreparedStatement prepStmt = con.prepareStatement(logQuery);
 	            rows = prepStmt.executeUpdate();
 	            if(rows > 0){
-		        	System.out.print("ISO Message is saved with " + rows + " rows.");
+		        	System.out.println("ISO Message is saved with " + rows + " rows.");
 		            if (prepStmt != null) { prepStmt.close(); }
 		        }
 	        } catch (SQLException e ) {
@@ -81,7 +81,7 @@ public class Logging {
 	        if(rows > 0){
 	        	String msgResponse = "Logging Trx is successful with " + rows +" rows.";
 	        	System.out.println("Logging TRX? " + msgResponse);
-	        	System.out.print("Redeem History is saved with " + rows + " rows.");
+	        	System.out.println("Redeem History is saved with " + rows + " rows.");
 	        }else{
 	        	String msgResponse = "Logging Trx is FAILED.";
 	        	System.out.println("Logging TRX? " + msgResponse);
