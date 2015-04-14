@@ -44,6 +44,7 @@ public class MQServer implements MessageListener {
 	Connection connection;
 	Session session;
 	MessageProducer replyProducer;
+	MessageConsumer requestConsumer;
 	String messageQueueProducer;
 	String messageQueueConsumer;
 	
@@ -81,25 +82,36 @@ public class MQServer implements MessageListener {
 		try {
 			if (this.connection == null) {	
 				// check connection
-	    		openConnection("tcp://10.107.11.206:61616");
+	    		openConnection(PropertiesLoader.getProperty("MQ_URL"));
 	    		LogLoader.setInfo(MQServer.class.getSimpleName(), "Connection to activeMQ re-established...");
 	    	}
-			System.out.println("ActiveMQ Server is setup to listen to "+messageQueueRequest+" & to respond to "+messageQueueResponse);
+			//Verbosity Debugging
+			this.messageQueueConsumer = messageQueueRequest; this.messageQueueProducer = messageQueueResponse;
+			System.out.println("ActiveMQ Server is setup to listen to " + this.messageQueueConsumer + 
+								" & to respond to " + messageQueueResponse);
+			//Create connection & each destination
 			this.session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-			this.messageQueueConsumer = messageQueueRequest;
-			Destination requestQueue = this.session.createQueue(messageQueueRequest);
-			MessageConsumer consumer = this.session.createConsumer(requestQueue);
-			consumer.setMessageListener(this); // Finally, Trigger this.onMessage(Message message)
+			Destination requestQueue = this.session.createQueue(this.messageQueueConsumer);
+			Destination responseQueue = this.session.createQueue(this.messageQueueProducer);
 			
+			//In order to implement JMS Request-Reply Messaging we need to properly setup everything before turning ON consumer.
+			//Thus, 
+			
+			//Setup The Producer/Publisher
+			this.replyProducer = this.session.createProducer(responseQueue);
+            this.replyProducer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+            //Setup a message producer, which is to respond to messages after consuming request message originated by clients.
 			//This messageQueueProducer is the name of queue in activeMQ to which producer refers when responding 
 			//or acting as MQClient. MQServer also acts as MQClient as It needs to give response for each request it receives
 			//from PSW.
 			
-			//[ when void onMessage() triggered ],
-			//because void onMessage() is triggered automatically due to its nature as a must-be-override interface;
-			//This approach is carried out as a way of global variable for void onMessage() to determine
+            //Setup The Consumer/Subscriber
+            this.requestConsumer = this.session.createConsumer(requestQueue);
+            this.requestConsumer.setMessageListener(this); 
+            // Finally, automatically Turning Consumer ON thus whenever incoming message available,
+            // It will trigger onMessage(Message message) because this MQServer class implements MessageListener
 			
-			this.messageQueueProducer = messageQueueResponse;
+			
 			
 	        LogLoader.setInfo(MQServer.class.getSimpleName(), "Listener is starting...");
 	        
@@ -110,15 +122,15 @@ public class MQServer implements MessageListener {
 		}	
 	}
 
-	public void onMessage(Message message) {
+	public void onMessage(Message requestMessage) {
         try {
         	LogLoader.setInfo(MQServer.class.getSimpleName(), "Listener: ON and Processing...");
-            if (message instanceof TextMessage) {
-                TextMessage txtMsg = (TextMessage) message;
+            if (requestMessage instanceof TextMessage) {
+                TextMessage txtMsg = (TextMessage) requestMessage;
                 String messageText = txtMsg.getText();
                 //System.out.println(messageText);
                 
-                // Calling Router() object to process the request from PWS.
+                // Calling Router() object to process the request from PSW.
                 // Here, ISOMessage is unpacked, extracted, and processed according to our business logic.
                 // Upon unpacking from ISO to data, it is then we can proceed for executing our business logics,
                 // Hence, dig out & play around with business logic in your DB apps;
@@ -130,49 +142,21 @@ public class MQServer implements MessageListener {
                 // The ISOMessage produced from Router() will be enveloped by within TextMessage response.
                 if (!result.equals("")) {
 	                //1. Ensuring Connection's session is still Established
-	                if (this.session == null) {
-	                	this.session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);   
-	                }
-	                /*	PROBLEMATIC PART	*/    
-	                //2. Setup The Producer/Publisher
-	                //Setup a message producer to respond to messages from clients, we will get the destination
-	                //to send to from the JMSReplyTo header field from a Message
-	                Destination requestQueue = this.session.createQueue(this.messageQueueConsumer);
-	    			this.replyProducer = this.session.createProducer(requestQueue);
-	    			//There are two modes; NON_PERSISTENT vs PERSISTENT
-	                this.replyProducer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-	                
-	    			//3. Create Message, Assign Correlation ID, and then finally SEND response to the Destination in ActiveMQ
+                	if (this.connection == null) {	
+                		this.session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);   
+                	}
+	                /*	PROBLEMATIC PART	*/
+	    			//2. Create Message, Set Text Content, Assign Correlation ID, and then finally SEND response to the Destination in ActiveMQ
 	                //Set the correlation ID from the received message to be the correlation id of the response message, s.t.
 	                //this lets the client identify which message is a corresponding response to which message esp. when there
 	                //are more than one outstanding messages to the server.
 	                TextMessage response = this.session.createTextMessage();
 	                response.setText(result);
-	                
-	                //Enveloping process by JMS Correlation ID, etc
-	                //Destination requestQueue = this.session.createQueue(this.messageQueueConsumer);
-	                response.setJMSReplyTo(requestQueue);
-	                response.setJMSCorrelationID(message.getJMSCorrelationID());
+	                response.setJMSReplyTo(requestMessage.getJMSReplyTo());
+	                response.setJMSCorrelationID(requestMessage.getJMSCorrelationID());
 	    	        this.replyProducer.send(response);
+	    	        //this.replyProducer.send(requestMessage.getJMSReplyTo(), response);
                 	
-                	/*
-                	try { 
-    					MQClient mqclient = new MQClient();
-    					mqclient.openConnection("tcp://10.107.11.206:61616");
-    				    mqclient.setupMessageProducer("PSWLinux0Rdm.Response", result);
-    				} catch (JMSException e) {
-    			        	if (e.getLinkedException() instanceof IOException) {
-    			                // ActiveMQ is not running. Do some logic here.
-    			                // use the TransportListener to restart the activeMQ connection
-    			                // when activeMQ comes back up.
-    			        		
-    			        	} else if (e.getMessage().contains("Connection refused")) {
-    			        		LogLoader.setError(MQClient.class.getSimpleName(), "Cannot connect to MQ, connection refused");
-    			        	} else {
-    			        		LogLoader.setError(MQClient.class.getSimpleName(), "Cannot connect to MQ, error unknown");
-    			        	}
-    			    }
-                	*/
 	    	        LogLoader.setInfo(MQServer.class.getSimpleName(), "Sending verification message: success. ");
 	    	        /*	PROBLEMATIC PART	*/ 
                 } else {

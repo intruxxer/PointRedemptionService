@@ -63,29 +63,24 @@ public class MQClient implements MessageListener {
         }
     }
  
-    public void setupMessageProducer(String clientQueueName, String message) {
+    public void setupMessageProducer(String adminQueueName, String message) {
         try {
+        	//Setup a message producer to send message to the request queue.
+        	//The server/worker will consume this request queue.
         	this.session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);  
-            Destination adminQueue = session.createQueue(clientQueueName);
- 
-            //Setup a message producer to send message to the queue the server is consuming from
+            Destination adminQueue = session.createQueue(adminQueueName);
             this.producer = session.createProducer(adminQueue);
-            //this.producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
             this.producer.setDeliveryMode(DeliveryMode.PERSISTENT);
  
-            //Create a temporary queue that this client will listen for responses on then create a consumer
-            //that consumes message from this temporary queue...for a real application a client should reuse
-            //the same temp queue for each message to the server...one temp queue per client
-            Destination tempDest = session.createTemporaryQueue();
+            //Create a message consumer that listens to response queue.
+            //Response queue is resulted from The server/worker by consuming request queue.
+            Destination tempDest = session.createTemporaryQueue(); //Should we supply name to this response queue?
             MessageConsumer responseConsumer = session.createConsumer(tempDest);
- 
-            //This class will handle the messages to the temp queue as well
             responseConsumer.setMessageListener(this);
  
             //Now create the actual message you want to send
             TextMessage txtMessage = session.createTextMessage();
             txtMessage.setText(message);
- 
             //Set the reply to field to the temp queue you created above, this is the queue the server
             //will respond to
             txtMessage.setJMSReplyTo(tempDest);
