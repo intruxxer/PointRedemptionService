@@ -2347,4 +2347,33 @@ Caused by: java.net.SocketException: Network is unreachable
  2015-04-13 11:30:49,016 INFO - Router: Msg is to be verified in router.. 
  2015-04-13 11:30:49,073 INFO - Router: Response from Router: 
  2015-04-13 11:30:49,074 INFO - MQServer: There is incoming message, but no response needed.
+ 2015-04-15 09:32:03,571 INFO - MQServer: Connection to activeMQ is established...
+ 2015-04-15 09:32:03,654 INFO - MQServer: Listener is starting...
+ 2015-04-15 09:32:03,654 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-15 09:32:03,669 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-15 09:32:04,407 INFO - Router: Verifying the 0200 message...
+ 2015-04-15 09:32:04,465 INFO - Router:  PROC CODE = 303030.
+ 2015-04-15 09:32:04,465 INFO - Router: Response from Router: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-15 09:32:04,466 INFO - MQServer: Sending verification message: success. 
+ 2015-04-15 09:32:04,467 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-15 09:32:04,467 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-15 09:32:04,468 ERROR - Router: org.jpos.iso.ISOException: 17 consumed=4
+ 2015-04-15 09:32:04,468 INFO - MQServer: There is incoming message, but no response needed.
+ 2015-04-15 09:32:04,468 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-15 09:32:04,468 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-15 09:32:04,523 INFO - Router: Test connection response received. MTI: 0800
+ 2015-04-15 09:32:04,523 INFO - Router: Response from Router: 
+ 2015-04-15 09:32:04,524 INFO - MQServer: There is incoming message, but no response needed.
+ 2015-04-15 09:32:04,524 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-15 09:32:04,525 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-15 09:32:04,582 INFO - Router: Verifying the 0200 message...
+ 2015-04-15 09:32:04,631 INFO - Router:  PROC CODE = 303030.
+ 2015-04-15 09:32:04,632 INFO - Router: Response from Router: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-15 09:32:04,632 INFO - MQServer: Sending verification message: success. 
+ 2015-04-15 09:32:04,632 INFO - MQServer: Listener: ON and Processing...
+ 2015-04-15 09:32:04,632 INFO - Router: Msg is to be verified in router.. 
+ 2015-04-15 09:32:04,690 INFO - Router: Verifying the 0200 message...
+ 2015-04-15 09:32:04,750 INFO - Router:  PROC CODE = 303030.
+ 2015-04-15 09:32:04,750 INFO - Router: Response from Router: 02107C14010022C1C00219   5188280232469701303030   126000000   126000000   115520000150324061801519   518828023246970100          223452          12346003180IDRIDR105                                                                                                      180
+ 2015-04-15 09:32:04,751 INFO - MQServer: Sending verification message: success. 
  

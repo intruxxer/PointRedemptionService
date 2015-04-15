@@ -115,6 +115,7 @@ public class Router {
             			inq.openConnection();
             			int pointOfCard = inq.inquiryPointCard(cardNum);
             			inq.closeConnection();
+            			System.out.println("Card Point:"+pointOfCard);
             			int bit63fulllength = 105; String bit63full = "";
             			int bit63datalength = String.valueOf(pointOfCard).length();
             			int bit63padding = bit63fulllength - bit63datalength;

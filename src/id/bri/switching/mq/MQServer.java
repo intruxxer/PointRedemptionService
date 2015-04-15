@@ -145,7 +145,7 @@ public class MQServer implements MessageListener {
                 	if (this.connection == null) {	
                 		this.session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);   
                 	}
-	                /*	PROBLEMATIC PART	*/
+	                
 	    			//2. Create Message, Set Text Content, Assign Correlation ID, and then finally SEND response to the Destination in ActiveMQ
 	                //Set the correlation ID from the received message to be the correlation id of the response message, s.t.
 	                //this lets the client identify which message is a corresponding response to which message esp. when there
