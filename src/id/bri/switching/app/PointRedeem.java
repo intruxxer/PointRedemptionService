@@ -56,7 +56,11 @@ public class PointRedeem {
 
     	if ( (currPointBal > 0) && (currPointBal >= Integer.parseInt(pointAmt)) ){
     		currPointBal = currPointBal - Integer.parseInt(pointAmt);
-    	}
+    	}else{
+        	String msgResponse = "UPDATE debet lbcrdext FAILED. Insufficient point.";
+        	System.out.println("Point Redeem updates? " + msgResponse);
+        	return cardInfo;
+        }
     	
         String query = "UPDATE lbcrdext SET LB_CP_PAS_CURR_BAL = '" + String.valueOf(currPointBal) + "' WHERE LB_CARD_NMBR = '" + cardNum + "'";
         int rows = 0;
@@ -137,7 +141,7 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
         
 	}
     
-    public Map<String, String> redeemPointTrx(String cardNum, String rule, String paramsVal, String paramsPoint, String trxTotal, String numPoint) throws SQLException {
+    public Map<String, String> redeemPointTrx(String cardNum, String rule, String paramsVal, String paramsPoint, String trxTotal, String pointAmt) throws SQLException {
     	//CH-TRXTOTAL-{CRATE-TRXNET-PUSED-PBALANCE}
     	redeemptionInfo.put("cardNum", cardNum);
     	redeemptionInfo.put("trxTotal", trxTotal);
@@ -147,10 +151,10 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
     	float conversionRate = (float) 0.00; float netSales = (float) 0.00;
     	//calculationRule: {P is Percentage, M is Multiply of, F is Flat
     	if(rule.equals("P")){
-    		//Here, make sure we call it by paramsPoint == numPoint
+    		//Here, make sure we call it by paramsPoint == pointAmt
     		//e.g. redeemPointTrx(CH, P, (int) %TRXTOTAL, 10, TRXTOTAL, 10)
-    		if( currPointBalance < Integer.valueOf(numPoint) || 
-    			Integer.valueOf(numPoint) < Integer.valueOf(paramsPoint) )
+    		if( currPointBalance < Integer.valueOf(pointAmt) || 
+    			Integer.valueOf(pointAmt) < Integer.valueOf(paramsPoint) )
     		{
     			System.out.println("Point is insufficient to redeem. ");
     			redeemptionInfo.put("cardTrxApproval", "DENIED");
@@ -158,15 +162,33 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
     			return redeemptionInfo;
     		}
     		
+    		if( Integer.valueOf(paramsVal) > 100 )
+        	{
+        		System.out.println("Point claim is invalid to redeem. ");
+        		redeemptionInfo.put("cardTrxApproval", "DENIED");
+        		redeemptionInfo.put("cardTrxApprovalInfo", " OVER 100 PERCENT");
+        		return redeemptionInfo;
+        	}
+    		
+    		if( !pointAmt.equals(paramsPoint) )
+        	{
+        		System.out.println("Invalid point to redeem. ");
+        		redeemptionInfo.put("cardTrxApproval", "DENIED");
+        		redeemptionInfo.put("cardTrxApprovalInfo", "INVALID AMOUNT POINT TO REDEEM");
+        		return redeemptionInfo;
+        	}
+    		
     		conversionRate = (float) (( Float.valueOf(paramsVal) * Float.valueOf(trxTotal) )/100.00);
     		netSales = Float.valueOf(trxTotal) - conversionRate;
-    		//PBALANCE = CBALANCE - PUSED
-    		pointBalance = currPointBalance - Integer.valueOf(numPoint);
-    		updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
+    		//PBALANCE = CURRBALANCE - PUSED
+        	pointBalance = currPointBalance - Integer.valueOf(pointAmt);
+        	updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
     		if(updateStatusPointBalance > 0){
+    			System.out.println("Point before redeem: "+ currPointBalance);
+            	System.out.println("Point after redeem: "+ pointBalance);
     			redeemptionInfo.put("trxDiscount", String.valueOf(conversionRate) );
         		redeemptionInfo.put("trxNetto", String.valueOf(netSales) );
-        		redeemptionInfo.put("pointRedeemAmt", numPoint );
+        		redeemptionInfo.put("pointRedeemAmt", pointAmt );
         		redeemptionInfo.put("pointBalanceAmt", String.valueOf(pointBalance) );
         		redeemptionInfo.put("cardTrxApproval", "APPROVED");
     			redeemptionInfo.put("cardTrxApprovalInfo", "POINT REDEEMED");
@@ -184,35 +206,47 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
     	}
     	else if(rule.equals("M")){
     		//e.g. redeemPointTrx(CH, M, (int) n*paramsValue, 10, TRXTOTAL, n*10)
-    		if( currPointBalance < Integer.valueOf(numPoint) ||  
-    			Integer.valueOf(numPoint) < Integer.valueOf(paramsPoint) )
+    		if( currPointBalance < Integer.valueOf(pointAmt) ||  
+    			Integer.valueOf(pointAmt) < Integer.valueOf(paramsPoint) )
     		{
     			System.out.println("Point is insufficient to redeem. ");
     			redeemptionInfo.put("cardTrxApproval", "DENIED");
-    			redeemptionInfo.put("cardTrxApproval", "INSUFFICIENT POINT");
+    			redeemptionInfo.put("cardTrxApprovalInfo", "INSUFFICIENT POINT");
     			return redeemptionInfo;
     		}
     		//Anticipating that for each, e.g. 10 points == 20,000 IDR, submitted point !== (n*10), then
     		//We take whole part (n) * paramsPoint (Here, params = 10 points) as point to be redeemed
     		//Remainder will be (1) Discarded if no debetPoint() occurs beforehand, or (2) Returned using kreditPoint()
-    		int pointUsed = Integer.valueOf(numPoint);
-    		int remainder = Integer.valueOf(numPoint) % Integer.valueOf(paramsPoint);
+    		int pointUsed = Integer.valueOf(pointAmt);
+    		int remainder = Integer.valueOf(pointAmt) % Integer.valueOf(paramsPoint);
     		if(remainder != 0){ 
     			//numPoint is NOT n*paramsPoint
-    			pointUsed = Integer.valueOf(numPoint) - remainder;
+    			pointUsed = Integer.valueOf(pointAmt) - remainder;
     		}else if(remainder > 0){
     			//numPoint is n*paramsPoint
-    			//Thus, pointUsed is still == numPoint
+    			//Thus, pointUsed is still == pointAmt
     		}
     		int coefficient = pointUsed/Integer.valueOf(paramsPoint);
     		conversionRate = (float) ( Float.valueOf(paramsVal) * Float.valueOf(coefficient) );
-    		netSales = Float.valueOf(trxTotal) - conversionRate;
-    		//PBALANCE = CBALANCE - PUSED
-    		pointBalance = currPointBalance - pointUsed;
-    		updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
-        	System.out.println("Point before redeem: "+ currPointBalance);
-        	System.out.println("Point after redeem: "+ pointBalance);
+    		//If conversion rate (discount) is larger than Total Trx, it is not allowed
+    		if( conversionRate > Float.valueOf(trxTotal) ){
+    			//Set discount == Total trx, hence Trx is free.
+    			conversionRate = Float.valueOf(trxTotal);
+    			netSales = Float.valueOf(trxTotal) - conversionRate;;
+    			//Set the point to be redeemed to be reduced to the max eligible point
+    			//PBALANCE = CBALANCE - MAXELLIGIBLEUSED
+    			int maxPoint = Integer.valueOf(paramsPoint) * ( Integer.valueOf(trxTotal)/Integer.valueOf(paramsVal) );
+    			pointBalance = currPointBalance - Integer.valueOf(maxPoint);
+        		updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
+    		}else{
+    			netSales = Float.valueOf(trxTotal) - conversionRate;
+    			//PBALANCE = CBALANCE - PUSED
+        		pointBalance = currPointBalance - Integer.valueOf(pointAmt);
+        		updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
+    		}
         	if(updateStatusPointBalance > 0){
+        		System.out.println("Point before redeem: "+ currPointBalance);
+            	System.out.println("Point after redeem: "+ pointBalance);
     			redeemptionInfo.put("trxDiscount", String.valueOf(conversionRate) );
         		redeemptionInfo.put("trxNetto", String.valueOf(netSales) );
         		redeemptionInfo.put("pointRedeemAmt", String.valueOf(pointUsed) );
@@ -231,21 +265,29 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
     		}
     	}else if(rule.equals("F")){
     		//e.g. redeemPointTrx(CH, F, (int)Flat, 10, TRXTOTAL, 10)
-    		if( currPointBalance < Integer.valueOf(numPoint) || 
-        			Integer.valueOf(numPoint) < Integer.valueOf(paramsPoint) )
-        		{
-        			System.out.println("Point is insufficient to redeem. ");
-        			redeemptionInfo.put("cardTrxApproval", "DENIED");
-        			redeemptionInfo.put("cardTrxApprovalInfo", "INSUFFICIENT POINT");
-        			return redeemptionInfo;
-        		}
-        		
+    		if( currPointBalance < Integer.valueOf(pointAmt) || 
+        			Integer.valueOf(pointAmt) < Integer.valueOf(paramsPoint) )
+        	{
+        		System.out.println("Point is insufficient to redeem. ");
+        		redeemptionInfo.put("cardTrxApproval", "DENIED");
+        		redeemptionInfo.put("cardTrxApprovalInfo", "INSUFFICIENT POINT");
+        		return redeemptionInfo;
+        	}
+    		if( !pointAmt.equals(paramsPoint) )
+        	{
+        		System.out.println("Invalid point to redeem. ");
+        		redeemptionInfo.put("cardTrxApproval", "DENIED");
+        		redeemptionInfo.put("cardTrxApprovalInfo", "INVALID AMOUNT POINT TO REDEEM");
+        		return redeemptionInfo;
+        	}
         		conversionRate = Float.valueOf(paramsVal);
         		netSales = Float.valueOf(trxTotal) - conversionRate;
         		//PBALANCE = CBALANCE - PUSED
         		pointBalance = currPointBalance - Integer.valueOf(paramsPoint);
         		updateStatusPointBalance = updatePoint(cardNum, String.valueOf(pointBalance));
         		if(updateStatusPointBalance > 0){
+        			System.out.println("Point before redeem: "+ currPointBalance);
+                	System.out.println("Point after redeem: "+ pointBalance);
         			redeemptionInfo.put("trxDiscount", String.valueOf(conversionRate) );
             		redeemptionInfo.put("trxNetto", String.valueOf(netSales) );
             		redeemptionInfo.put("pointRedeemAmt", paramsVal );
