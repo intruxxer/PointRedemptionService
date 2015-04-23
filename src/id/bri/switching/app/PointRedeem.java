@@ -53,6 +53,7 @@ public class PointRedeem {
 		
 		Inquiry inq = new Inquiry();
     	int currPointBal = inq.inquiryPointCard(cardNum);
+    	inq.closeConnection();
 
     	if ( (currPointBal > 0) && (currPointBal >= Integer.parseInt(pointAmt)) ){
     		currPointBal = currPointBal - Integer.parseInt(pointAmt);
@@ -91,6 +92,8 @@ public class PointRedeem {
 		
 		Inquiry inq = new Inquiry();
     	int currPointBal = inq.inquiryPointCard(cardNum);
+    	inq.closeConnection();
+    	
     	currPointBal = currPointBal + Integer.parseInt(pointAmt);
     	
         String query = "UPDATE lbcrdext SET LB_CP_PAS_CURR_BAL = '" + String.valueOf(currPointBal) + "' WHERE LB_CARD_NMBR = '" + cardNum + "'";
@@ -147,6 +150,7 @@ public int updatePoint(String cardNum, String pointAmt) throws SQLException {
     	redeemptionInfo.put("trxTotal", trxTotal);
     	Inquiry inq = new Inquiry();
     	int currPointBalance = inq.inquiryPointCard(cardNum);
+    	inq.closeConnection();
     	int pointBalance = 0; int updateStatusPointBalance = 0;
     	float conversionRate = (float) 0.00; float netSales = (float) 0.00;
     	//calculationRule: {P is Percentage, M is Multiply of, F is Flat

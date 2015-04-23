@@ -88,7 +88,7 @@ public class Router {
             		// MODULE 2 - TRANSACTION WITH POINT
             		// Tabels = "lbcpcrd" [status] & "lbcrdext" [point]
             		// DO: (1) To find Point Balance then Decrease it, 
-                	//     (2) To form a reply to CardLink (via PSW)
+                	//     (2) To form a posting-transaction reply to CardLink (via PSW)
             		String trxOriAmt = isoMsg.getString(4).trim();
                 	String trxChAmt = isoMsg.getString(5).trim();
                 	String trxNetAmt = isoMsg.getString(6).trim();
@@ -97,12 +97,23 @@ public class Router {
                 	String tId = isoMsg.getString(41).trim();
                 	String mId = isoMsg.getString(42).trim();
                 	
+                	String ruleType = "P"; 
+                	String paramsVal = "20";
+                	String paramsPoint = "100";
+                	//Later, point amount is set in bit 63
+                	String pointAmt = "100";
+                	
+                	//tId, mId are used to read what ruleType is available along with its paramsVal & paramsPoint
+                	PointRedeem point = new PointRedeem();
+                	Map<String, String> redeemTrx = point.redeemPointTrx(cardNum, ruleType, paramsVal, paramsPoint, trxOriAmt, pointAmt);
+                	
             		LogLoader.setInfo(Router.class.getSimpleName(), " PROC CODE = 101010.");
             	}
             	else if(procCode.equals("303030")) {
             		// MODULE 1 - INQUIRY STATUS & POINT
             		// Tabels = "lbcpcrd" [status] & "lbcrdext" [point]
-            		// DO: (1) To check Status/Eligibility of Card, (2) Point Balance
+            		// DO: (1) To check Status/Eligibility of Card, 
+            		//	   (2) To reply a current Point Balance of a Card
             		Inquiry inq = new Inquiry();
             		Map<String, String> resInquiry = inq.inquiryStatusCard(cardNum);
             		inq.closeConnection();
